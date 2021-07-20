@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+#Terraform
+full-example/terraform/.terraform*
+full-example/terraform/terraform.tfstate*
+full-example/terraform/*.zip
+bin
+#AWS Iam Authenticator

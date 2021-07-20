@@ -1,0 +1,29 @@
+{
+  "name": "eks-deploy-lambda",
+  "version": "1.0.0",
+  "description": "Lambda to interact with k8s APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eledoranda/nodejs-eks-deploy-lambda.git"
+  },
+  "keywords": [
+    "Node.js",
+    "k8s",
+    "EKS"
+  ],
+  "author": "Edoardo Randazzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eledoranda/nodejs-eks-deploy-lambda/issues"
+  },
+  "homepage": "https://github.com/eledoranda/nodejs-eks-deploy-lambda#readme",
+  "dependencies": {
+    "@aws-sdk/client-eks": "^3.22.0",
+    "@kubernetes/client-node": "^0.15.0",
+    "js-yaml": "^4.1.0"
+  }
+}
