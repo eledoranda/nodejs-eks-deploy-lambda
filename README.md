@@ -23,7 +23,7 @@ The only further steps to make it works are:
 ### Authentication 
 The project uses [aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator) to retrieve the token from EKS. At the moment, I haven't found other solutions to easily retrieve the token.  
 In order to use IAM Authenticator is necessary to add the executable to the Lambda code. 
-The token is automatically retrieved at runtime using the dynamic configuration object create by [getConfigForOptions](/utils/getConfigForOptions) function. This configuration will be added to the K8s client using the [loadFromOptions](/code/index.js#L22) function.
+The token is automatically retrieved at runtime using the dynamic configuration object create by [getConfigForOptions](/code/utils/getConfigForOptions/index.js) function. This configuration will be added to the K8s client using the [loadFromOptions](/code/index.js#L22) function.
 
 <br/>
 
