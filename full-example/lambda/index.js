@@ -71,16 +71,20 @@ exports.handler = async function (event, context) {
                     await client.read(resource);
                     console.log(`Resource '${name}' of type ${kind} already exists in Namespace '${ns}', patching it..`)
                     await client.patch(resource);
+
+                    //Update Summary
                     deploymentSummary.patched.push({ name: name, file: `${file}.yml`, kind });
 
                 } catch (err) {
                     try {
                         // Resource dosen't exist, create it 
                         if (err.statusCode === 404) {
-
+                            
                             console.log(`Resource '${name}' of type ${kind} not found in Namespace '${ns}', creating...`)
                             await client.create(resource);
                             console.log(`Resource '${name}' of type ${kind} created in Namespace '${ns}'`)
+                            
+                            //Update Summary
                             deploymentSummary.created.push({ name: name, file: `${file}.yml`, kind });
 
                         }

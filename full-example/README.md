@@ -61,7 +61,7 @@ aws lambda invoke --function-name eks-deploy-lambda --payload  '{"namespace": "t
   "clusterUser": <user>
 }
 ```
-# Install Steps
+# Setup Steps
 
 ## Terraform
 
