@@ -5,6 +5,8 @@ Node.js Lambda function that uses Kubernetes API without hard-coded Token to int
 The idea behind this repo is to create a Lambda to deploy and manage K8s applications in EKS using an AWS-oriented approach with IAM Role instead of using a K8s hard-coded token or configuration.   
 This project uses the Kubernetes Javascript client [@kubernetes/client-node](https://github.com/kubernetes-client/javascript), but this approach is adaptable for other languages supported by the [client](https://github.com/kubernetes-client).
 
+Medium Article: [Manage Kubernetes Deployment with Lambda](https://medium.com/@edoardo.randazzo/manage-kubernetes-deployment-with-lamba-8895ee8f46df)
+
 ### How it works
 This lambda builds the Kubernetes configuration by automatically retrieving info from EKS using AWS API, fetches the K8s token using [aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator), and creates a K8s client to communicate with the cluster. 
 This strategy could be easily integrated into a DevOps internal/external pipeline without providing direct access to the cluster, but just the permission to invoke the lambda or an API.
